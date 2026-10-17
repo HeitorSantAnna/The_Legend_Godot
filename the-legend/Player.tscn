@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://4ymoo8euip44"]
 
-[ext_resource type="Script" uid="uid://cc4pmnb35ig25" path="res://PlayerController.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://dlbq4kgyk5npn" path="res://icon.svg" id="2_kpjcp"]
+[ext_resource type="Script" uid="uid://c88mm0chksumt" path="res://PlayerController.gd" id="1_4flbx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_osou1"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_osou1"]
 
-[node name="Player" type="CharacterBody2D" unique_id=1431538767]
-script = ExtResource("1_kpjcp")
+[node name="Player" type="Area3D" unique_id=906274986]
+script = ExtResource("1_4flbx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1842478440]
-shape = SubResource("CircleShape2D_osou1")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1770518436]
+shape = SubResource("SphereShape3D_osou1")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=793131549]
-texture = ExtResource("2_kpjcp")
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CollisionShape3D" unique_id=674007331]

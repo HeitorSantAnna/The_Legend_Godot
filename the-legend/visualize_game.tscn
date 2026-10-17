@@ -1,20 +1,10 @@
 [gd_scene format=3 uid="uid://demuc3lyeymnq"]
 
-[ext_resource type="PackedScene" uid="uid://4ymoo8euip44" path="res://Player.tscn" id="1_n26xp"]
+[ext_resource type="PackedScene" uid="uid://4ymoo8euip44" path="res://player.tscn" id="1_n26xp"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_osou1"]
+[node name="VisualizeGame" type="Node3D" unique_id=748132214]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_osou1"]
+[node name="Player" parent="." unique_id=906274986 instance=ExtResource("1_n26xp")]
 
-[node name="VisualizeGame" type="Node2D" unique_id=1689691909]
-
-[node name="Player" parent="." unique_id=1431538767 instance=ExtResource("1_n26xp")]
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2086272588]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1548527883]
-position = Vector2(0, 70)
-physics_material_override = SubResource("PhysicsMaterial_osou1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1499019501]
-shape = SubResource("WorldBoundaryShape2D_osou1")
+[node name="Camera3D" type="Camera3D" parent="." unique_id=623827900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.0369482)
